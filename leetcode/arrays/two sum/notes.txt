@@ -1,0 +1,51 @@
+{5,2,11,7,15}
+target =9
+sum of the two pairs should be equal to target
+
+three ways to do it :
+1. Brute Force
+2.better 
+3.optimized
+Brute Force:
+
+for (int i=0;i<n;i++){
+first=arr[i];
+ for(int j=i+1;j<n;j++){
+    second=arr[j];
+    sum=first + second;
+    if(sum==tar){
+        return 
+    }
+ }
+}--> time complexity o(nsquare)
+
+2. two pointers approach:
+--> sort the array
+--> then 
+while (start<end){
+    sum=arr[start]+arr[end];
+    if (sum>target){
+        end--
+    }
+    else if(sum<target){
+        start++;
+    }
+    else
+    return  ---> time complexity O(nlogn)
+}
+
+3. optimized
+uses the hashing
+sum = first+second = target
+second=target-first
+unordered-map<i,i>m
+for (int i=0 to n){
+    first=arr[i];
+    secondc=target-first ;
+    if(m.find(second))!=m.end(){
+        return [i,m[second]];
+    }
+    m[first]//->key=i//->value; --> to store element as key and index as value
+} 
+we can assume the time complexity as O(1) because of unordered map find function but overall 
+we can write it as O(n) time complexity for this solution 
