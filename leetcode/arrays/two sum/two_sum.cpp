@@ -12,7 +12,7 @@ public:
            if(m.find(second)!=m.end()){
              ans.push_back(m[second]);
             ans.push_back(i);
-           
+          
             break;
            }
            m[first]=i;
